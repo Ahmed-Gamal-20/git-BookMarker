@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="mt-5 pt-5">Bookmarker</h1>
+      <div
+        class="head mt-5 pt-5 d-flex justify-content-center align-items-center gap-2 fs-2"
+      >
+        <i class="fa-solid fa-bookmark"></i>
+        <h2>Bookmark your favorite sites</h2>
+        <i class="fa-solid fa-bookmark"></i>
+      </div>
+
+      <div class="form position-relative p-4">
+        <i class="fa-solid fa-book"></i><span class="ms-2">Site Name</span>
+
+        <input
+          oninput="validate(this)"
+          id="sitename"
+          placeholder="Bookmark Name"
+          type="email"
+          class="mt-2 p-1 ps-3 form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div class="alert alert-danger mt-1 p-1 d-none">
+          DUDE! it should be between 3 to 20 characters
+        </div>
+        <br />
+        <i class="fa-solid fa-link"></i><span class="ms-2">Site URL</span>
+
+        <input
+          oninput="validate(this)"
+          id="siteurl"
+          placeholder="Website URL"
+          type="email"
+          class="mb-1 mt-2 p-1 ps-3 form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+
+        <div class="alert alert-danger p-1 d-none">
+          Bro!! this is not valid url
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <button
+            onclick="add()"
+            type="submit"
+            class="btn btn-danger text-center px-4 mt-3"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="divide2 d-flex justify-content-between b">
+          <h4 >index</h4>
+          <h4 class="me-5">Website Name</h4>
+          <h4>Visit</h4>
+          <h4>Delete</h4>
+        </div>
+        <hr>
+        <div id="demo"></div> -->
+
+      <!-- <div class="divide3 d-flex justify-content-between b">
+          <h4>1</h4>
+          <h4 class="ms-5">Website Name</h4>
+          <h4><button type="button" class="btn btn-danger ms-5">Danger</button>
+          </h4>
+          <h4><button type="button" class="btn btn-danger">Danger</button>
+          </h4>
+        </div> -->
+
+      <div class="mt-5 pt-5">
+        <table class="custom-table bg-white fs-3">
+          <thead>
+            <tr>
+              <td>index</td>
+              <td>Website Name</td>
+              <td>Visit</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+
+          <tbody id="demo"></tbody>
+
+          <!-- <tr>
+            <td>1</td>
+            <td>index</td>
+            <td class="my-3">
+              <button type="button" class="btn btn-success ms-5">
+                <i class="fa-solid fa-eye"></i> Visit
+              </button>
+            </td>
+            <td class="my-3">
+              <button type="button" class="btn btn-danger ms-5">
+                <i class="fa-solid fa-eye"></i> delete
+              </button>
+            </td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+
+    <div class="lbc d-none" id="foo">
+      <div class="lb rounded p-5 position-relative">
+        <i
+          onclick="hide()"
+          id="x"
+          class="fa-solid fa-xmark fs-3 position-absolute"
+        ></i>
+        <i class="fa-solid fa-circle text-danger me-2 mb-3"></i>
+        <i class="fa-solid fa-circle text-success me-2"></i>
+        <i class="fa-solid fa-circle text-warning"></i>
+        <h4 class="">
+          Site Name or Url is not valid, Please follow the rules below :
+        </h4>
+
+        <br />
+        <i class="fa-solid fa-arrow-circle-right fs-3 text-danger"></i>
+        <span class="fs-5">Site name must contain at least 3 characters</span
+        ><br /><br />
+        <i class="fa-solid fa-arrow-circle-right fs-3 text-danger"></i>
+        <span class="fs-5">Site name must contain at least 3 characters</span>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
